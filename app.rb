@@ -15,7 +15,7 @@ get "/" do
     key = "ecc22875ce740e49b4ed25f48ab8c9b4" 
     url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&units=#{units}&appid=#{key}"
 
- ## The Weather
+### The Weather
     @forecast = HTTParty.get(url).parsed_response.to_hash
     @current = ["#{@forecast["current"]["temp"]} degrees" " " "and" " " "#{@forecast["current"]["weather"][0]["description"]} conditions"] 
     puts @current
