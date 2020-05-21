@@ -1,0 +1,19 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white
+}
+
+h1 {
+    text-shadow: 1px 1px 1px black
+}
+
+.jumbotron-title {
+    background-attachment: fixed;
+    background-image: url(vt.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    min-height: 20em
+}

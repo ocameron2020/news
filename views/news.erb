@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Google Fonts -->
-    <!-- Swap out "Roboto" for the font(s) you want to use -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
@@ -18,12 +17,67 @@
     <!-- Your own CSS -->
     <link rel="stylesheet" href="/styles.css">
 
-    <title>News</title>
+    <title>Barton</title>
   </head>
   <body>
+    <div class="jumbotron jumbotron-title jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Hello From Barton, Vermont</h1 class="display-4">
+        <p class="lead">Weather & News</p>
+      </div>
+    </div>
+
 
     <div class="container mt-5">
-      <h1>News</h1>
+      <h1><i class="fas fa-cloud-sun"></i></h1>
+      <h2>The Weather in Barton</h2>
+    </div>
+
+<div class="container mt-5">
+        <p>
+            <h4>Today</h4>
+        </p>
+        <% for currcondition in @current %>
+            <p><%= currcondition %></p>
+        <% end %>
+    </div>
+
+     <div class="container mt-5">
+        <p>
+            <h4>This Week</h4>
+            <% for days in @fwdoutlook %>
+            <p><%= days %></p>
+            <% end %>
+        </p>
+    </div>
+
+
+    <hr class="my-4">
+
+    <div class="container mt-5">
+      <h1><i class="far fa-newspaper"></i></h1>
+      <h2>Top News Right Now</h2>
+    </div>
+
+    <div class="container mt-5">
+        <p>
+            <% for news in @topnews %>
+            <p><a href=<%= news %></a></p>
+            <% end %>
+        </p>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="container footer">
+        <div class="row my-5">
+            <div class="col text-center">
+                <a href="/" class="btn btn-success">Refresh Forecast & Stories</a>
+            </div>
+        </div>
+            <div class="col text-center">
+                <h6><a href=https://newsapi.org/>Stories by News API</a></h6>
+            </div>
     </div>
 
     <!-- Optional JavaScript -->
